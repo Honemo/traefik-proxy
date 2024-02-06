@@ -11,6 +11,7 @@ services:
     # - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
     # Spécifie la redirection en 301 sinon c'est une 302
     # - "--entrypoints.web.http.redirections.entrypoint.permanent=true"
+    restart: always
     ports:
     - "80:80"
     - "443:443"
