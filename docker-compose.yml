@@ -38,6 +38,17 @@ services:
     networks:
         - web-applications
 
+  chadburn:
+    image: premoweb/chadburn:latest
+    restart: always
+    depends_on:
+      - traefik
+    command:  daemon
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - web-applications
+
 networks:
   web-applications:
     name: web-applications
